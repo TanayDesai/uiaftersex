@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'LufgaBlack';
+  src: local('LufgaBlack'), url("../assests/LufgaLight.ttf") format('truetype');
+}
+
+
+.main {
+  max-height: 150vh;
+  margin: auto;
+  width: 150vw;
+  padding: 3rem;
+  /* background-color: #000; */
+}
+
+
+.display {
+  margin-top: 20px;
+  position: relative;
+  max-width: 500px;
+  min-height: 300px;
+  background-color:#f1f1f1;
+  /* background-image:linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  backdrop-filter: "blur(10px)";  */
+  
+  border-radius: 8px;
+  box-shadow:  rgba(0, 0, 0, 0.3) 0px 8px 30px 0px;
+}
+
+
+.displayBar {
+  background-color: #f1f1f1;
+  border-top-right-radius: 8px ;
+  border-top-left-radius: 8px ;
+  height: 50px;
+  display: flex;
+  padding: 4px;
+}
+.displayBarIcons {
+  display: flex;
+  margin: auto;
+  /* background-color: #000; */
+  height: 15px;
+  width: 55px;
+  text-align: center;
+  justify-content: center;
+}
+.displayBarIcon {
+  background-color: #bfbdbd;
+  border-radius: 20px;
+  width: 10.5px;
+  height: 10.5px;
+  margin: auto;
+  margin-left: 4px;
+  margin-right: 4px;
+  display: flex;
+}
+
+.displayBarSearchBox {
+  display: flex;
+  margin: auto;
+  height: 30px;
+  width: 70%;
+  border-radius: 4px;
+  color:#000000 ;
+  padding: 5px;
+  align-items: center;
+  font-size: 12px;
+  background-color: #ffffff;
+}
+
+.displayBarArrow {
+  display: flex;
+  margin: auto;
+}
+
+
+.textBox {
+  margin-top: 20px;
+  position: relative;
+  max-width: 400px;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow:  rgba(0, 0, 0, 0.3) 0px 8px 30px 0px;
+}
+.textBoxBar{
+  background-image:linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  backdrop-filter: "blur(20px)"; 
+  height: 50px;
+  display: flex;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+
+}
+
+.textBoxBottom {
+  background-color: black;
+  height: 86%;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.logoBox {
+  position: relative;
+  margin: auto;
+  /* transform: translate(0%,50%); */
+  max-width: 500px;
+  min-height: 330px;
+  background-color:#f1f1f1;
+  background: #FFFFFA;
+  background: radial-gradient(at center, #FFFFFA, #FFADD5);
+  border-radius: 8px;
+  box-shadow:  rgba(0, 0, 0, 0.3) 0px 8px 30px 0px;
+  padding: 15px;
+}
+
+@media (max-width: 600px) {
+  .logoBox {
+    width: 350px;
+  }
+  .main {
+    max-height: 150vh;
+  }
+  
+}
+
+.header {
+  font-size:44px;
+  justify-content:space-between;
+  display: flex;
+  font-weight: 700;
+  color:#000;
+  font-family: "LufgaBlack";
+  /* background-color: blue; */
+}
+
+.description {
+  display: inherit;
+  justify-content:space-around;
+  align-items: inherit;
+  /* background-color: blue; */
+  margin-top: 26px;
+}
+
+.description a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description p {
+  margin-top: 22px;
+  color: #666666;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 500;
+  /* background-color: aqua; */
+}
+
+.description span {
+  color: #000;
+}
+
+.footer {
+  margin-top: 60px;
+  /* text-align: center; */
+}
+
+.footer p {
+  color: #666666;
+  font-size: 14px;
+  margin: auto;
+  /* display: flex; */
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.footer span {
+  color: #000;
+}
