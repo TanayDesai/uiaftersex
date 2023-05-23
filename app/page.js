@@ -8,17 +8,11 @@ import myGif from '../assests/1.gif'
 import myGif2 from '../assests/2.gif'
 import myGif3 from '../assests/3.gif'
 import {motion} from "framer-motion";
-
+import useWindowSize from "@rooks/use-window-size"
 
 export default function Home() {
   const targetRef = useRef(null);
-  // const {innerWidth, innerHeight} = window;
-
-        // const scrollToTarget = () => {
-        //   if (targetRef.current) {
-        //     targetRef.current.scrollIntoView({ behavior: 'smooth' });
-        //   }
-        // }
+  const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
 
   const scrollToTarget = () => {
     const element = targetRef.current;
@@ -46,22 +40,28 @@ export default function Home() {
  
   useEffect(() => {
       scrollToTarget()
-      // const window = window;
-      // console.log(innerWidth, innerHeight)
       const down = (e) => {
         if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
           e.preventDefault()
           scrollToTarget()
-          console.log("Done")
         }
       }
+
+      if (typeof window == 'object'){
+      }
+      else {
+         const window = {innerWidth: 900, innerHeight: 900}
+      }
+      
+
+  
       document.addEventListener('keydown', down)
-      return () => document.removeEventListener('keydown', down)
+      return () => {document.removeEventListener('keydown', down)}
     }, [])
 
   return (
-    <div  className={styles.main}>
-     <motion.div drag dragMomentum={false} style={{backgroundColor:"white",x: window.innerWidth < 900 ? 100 : 200,y:150}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
+    <div className={styles.main}>
+     <motion.div drag dragMomentum={false} style={{backgroundColor:"white",x: innerWidth < 900 ? 100 : 200,y:150}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
         <div className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
           <div className={styles.displayBarIcon}></div>
@@ -74,7 +74,7 @@ export default function Home() {
         <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}} src={myGif} width={300} height={250} alt=""/>
       </motion.div>
 
-      <motion.div drag dragMomentum={false} style={{x: window.innerWidth > 900 ? 300 : 800 > window.innerWidth ? 400 : 0,y: window.innerHeight < 650 ? 300 :200,background: "#C37158",background: "radial-gradient(at center bottom, #D08C85, #67E8CF)"}} initial={{scale:0.7}} whileHover={{scale:0.709, transition:{duration:0.2}}} className={styles.display}>
+      <motion.div drag dragMomentum={false} style={{x: innerWidth > 900 ? 300 : 800 > innerWidth ? 400 : 0,y: innerHeight < 650 ? 300 :200,background: "#C37158",background: "radial-gradient(at center bottom, #D08C85, #67E8CF)"}} initial={{scale:0.7}} whileHover={{scale:0.709, transition:{duration:0.2}}} className={styles.display}>
         <div className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
           <div className={styles.displayBarIcon}></div>
@@ -88,7 +88,7 @@ export default function Home() {
          {/* <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}} width={300} height={200} alt=""/> */}
       </motion.div> 
 
-      <motion.div drag dragMomentum={false} style={{background:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))", y: window.innerHeight > 650 ? 10 : -20, x: window.innerWidth  < 1350 && 600 < window.innerWidth ? 900 : 600 > window.innerWidth && 1250 > window.innerWidth ? 900 : 1340}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
+      <motion.div drag dragMomentum={false} style={{background:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))", y: innerHeight > 650 ? 10 : -20, x: innerWidth  < 1250 && 600 < innerWidth ? 900 : 600 > innerWidth && 1250 > innerWidth ? 1000 : 1340}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
         <div className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
             <div className={styles.displayBarIcon}></div>
@@ -101,7 +101,7 @@ export default function Home() {
         {/* <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}}  width={300} height={250} alt=""/> */}
       </motion.div>
 
-      <motion.div drag dragMomentum={false} style={{x:  window.innerWidth < 1250 && 700 < window.innerWidth  ? 900 : window.innerWidth < 1250 && 600 > window.innerWidth ? 900 :  1400,y:window.innerHeight < 700 ? -900: -800}} className={styles.textBox} whileHover={{scale:1.008, transition:{duration:0.2}}}>
+      <motion.div drag dragMomentum={false} style={{x:  innerWidth < 1250 && 700 < innerWidth  ? 900 : innerWidth < 1250 && 600 > innerWidth ? 900 :  1400,y:innerHeight < 700 ? -900: -800}} className={styles.textBox} whileHover={{scale:1.008, transition:{duration:0.2}}}>
         <div className={styles.textBoxBar}>
           <div className={styles.displayBarIcons}>
             <div className={styles.displayBarIcon}></div>
@@ -114,7 +114,7 @@ export default function Home() {
         <div className={styles.textBoxBottom}></div>
       </motion.div>
 
-      <motion.div ref={targetRef} style={{y:-1000, x: window.innerWidth < 800 ? 500 : 0}} className={styles.logoBox}>
+      <motion.div ref={targetRef} style={{y:-1000, x: innerWidth < 800 ? 500 : 0}} className={styles.logoBox}>
         <div className={styles.header}>
             <h7>uiaftersex</h7>
             <div><ImCommand size={25}></ImCommand></div>
