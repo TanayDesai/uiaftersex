@@ -86,13 +86,13 @@ html {
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb)); */
-  /* background: #c7c6c6; */
-  width: 150%;
+  /* width: 150%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150vh;
+  height: 150vh; */
+  justify-content: center;
+  align-items: center;
   background: #FF37BA;
   background-repeat: no-repeat;
   background: radial-gradient(at center top, #FF37BA, #F4FFB3);
@@ -100,7 +100,7 @@ body {
   /* background:radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0)) */
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   body {
     max-width: 150%;
     max-height: 150vh;
@@ -110,14 +110,11 @@ body {
     max-height: 150vh;
 
   }
-}
-
-
+} */
 
 body::-webkit-scrollbar{
   display: none;
 }
-
 
 a {
   color: inherit;

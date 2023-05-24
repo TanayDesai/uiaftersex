@@ -9,19 +9,17 @@ import myGif2 from '../assests/2.gif'
 import myGif3 from '../assests/3.gif'
 import {motion} from "framer-motion";
 import useWindowSize from "@rooks/use-window-size"
+import { useRouter } from 'next/navigation'; 
+
 
 export default function Home() {
+  const router = useRouter();
   const targetRef = useRef(null);
   const { innerWidth, innerHeight, outerHeight, outerWidth } = useWindowSize();
 
   const scrollToTarget = () => {
     const element = targetRef.current;
     if (element) {
-      // const { top, left, height, width } = element.getBoundingClientRect();
-      // const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      // const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-      // const offsetTop = top + scrollTop - (window.innerHeight - height) / 2;
-      // const offsetLeft = left + scrollLeft - (window.innerWidth - width) / 2;
       const { top, left, height, width } = element.getBoundingClientRect();
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -29,35 +27,28 @@ export default function Home() {
       const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
       const offsetTop = top + scrollTop - (viewportHeight - height) / 2;
       const offsetLeft = left + scrollLeft - (viewportWidth - width) / 2;
-
-
       window.scrollTo({
         top: offsetTop,
         left: offsetLeft,
         behavior: 'smooth',})
     }
   }
- 
-  useEffect(() => {
-      scrollToTarget()
-      const down = (e) => {
-        if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-          e.preventDefault()
-          scrollToTarget()
-        }
-      }
 
-      if (typeof window == 'object'){
-      }
-      else {
-         const window = {innerWidth: 900, innerHeight: 900}
-      }
-      
-
+  const handleButtonClick = (name) => {
+      router.push(name);
+    } 
   
-      document.addEventListener('keydown', down)
-      return () => {document.removeEventListener('keydown', down)}
-    }, [])
+  useEffect(() => {
+        scrollToTarget()
+        const down = (e) => {
+          if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+            e.preventDefault()
+            scrollToTarget()
+          }
+        }
+        document.addEventListener('keydown', down)
+        return () => {document.removeEventListener('keydown', down)}
+      }, [])
 
   return (
     <div className={styles.main}>
@@ -108,16 +99,22 @@ export default function Home() {
             <div className={styles.displayBarIcon}></div>
             <div className={styles.displayBarIcon}></div>
           </div>
-          <div className={styles.displayBarSearchBox}>Notes</div>
+          <div className={styles.displayBarSearchBox} style={{backgroundColor:"transparent",borderColor:"#666666",borderStyle:"solid",borderWidth:"1px"}}>notes.txt</div>
           <motion.div whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
-        <div className={styles.textBoxBottom}></div>
+        <div className={styles.textBoxBottom}>
+          <div className={styles.notes}>
+            <div className={styles.notesHeader}>Controls</div>
+            <p>A simple, modern, and accessible UI framework for Next.js.A simple, modern, and accessible UI framework.</p>
+            <p>A simple, <code className={styles.code}>modern</code>, and accessible</p>
+          </div>
+        </div>
       </motion.div>
 
       <motion.div ref={targetRef} style={{y:-1000, x: innerWidth < 800 ? 500 : 0}} className={styles.logoBox}>
         <div className={styles.header}>
             <h7>uiaftersex</h7>
-            <div><ImCommand size={25}></ImCommand></div>
+            <div onClick={() => {handleButtonClick("/peek")}}><ImCommand size={25}></ImCommand></div>
         </div>
         <div className={styles.description}>
           <p>A simple, modern, and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
