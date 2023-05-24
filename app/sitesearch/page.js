@@ -10,7 +10,7 @@ import CommandMenuSiteSearch from '@/components/sitesearch/command';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
 import { User } from '@geist-ui/core';
-
+import { GeistProvider, CssBaseline } from '@geist-ui/core'
 
 export default function Home() {
   const router = useRouter();
@@ -33,6 +33,7 @@ export default function Home() {
   })
 
   return (
+  <GeistProvider>
     <div className={styles.main}>
       {open && <CommandMenuSiteSearch className={styles.menu}></CommandMenuSiteSearch>} 
       <div className={styles.content}>
@@ -89,5 +90,6 @@ export default function Home() {
 
       </div>
     </div>
+  </GeistProvider>
   )
 }

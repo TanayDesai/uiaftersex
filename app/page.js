@@ -15,7 +15,7 @@ import { useRouter } from 'next/navigation';
 import { User } from '@geist-ui/core';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-
+import { GeistProvider, CssBaseline } from '@geist-ui/core'
 
 export default function Home() {
   const router = useRouter();
@@ -56,6 +56,7 @@ export default function Home() {
       }, [])
 
   return (
+  <GeistProvider>
     <div className={styles.main}>
      <motion.div drag dragMomentum={false} style={{backgroundColor:"white",x: innerWidth < 900 ? 100 : 200,y:150}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
         <div className={styles.displayBar}>
@@ -145,5 +146,6 @@ export default function Home() {
 
 
     </div>
+  </GeistProvider>
   )
 }
