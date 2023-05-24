@@ -7,9 +7,14 @@ import {HiArrowSmallRight} from "react-icons/hi2";
 import myGif from '../assests/1.gif'
 import myGif2 from '../assests/2.gif'
 import myGif3 from '../assests/3.gif'
+import signature from "../assests/signature2.svg"
+import avatar from "../assests/avatar2.png"
 import {motion} from "framer-motion";
 import useWindowSize from "@rooks/use-window-size"
 import { useRouter } from 'next/navigation'; 
+import { User } from '@geist-ui/core';
+import {VscTwitter} from 'react-icons/vsc'
+import {AiFillGithub} from 'react-icons/ai'
 
 
 export default function Home() {
@@ -60,7 +65,7 @@ export default function Home() {
           <div className={styles.displayBarIcon}></div>
         </div>
         <div className={styles.displayBarSearchBox}>Site Search + ⌘</div>
-          <motion.div whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
+          <motion.div onClick={() => {handleButtonClick("/sitesearch")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
         <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}} src={myGif} width={300} height={250} alt=""/>
       </motion.div>
@@ -73,7 +78,7 @@ export default function Home() {
           <div className={styles.displayBarIcon}></div>
         </div>
         <div className={styles.displayBarSearchBox}>Link Previews</div>
-          <motion.div whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
+          <motion.div onClick={() => {handleButtonClick("/linkpreviews")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
         
          {/* <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}} width={300} height={200} alt=""/> */}
@@ -87,8 +92,9 @@ export default function Home() {
             <div className={styles.displayBarIcon}></div>
           </div>
           <div className={styles.displayBarSearchBox}>Peek</div>
-          <motion.div whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
+          <motion.div onClick={() => {handleButtonClick("/peek")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
+        
         {/* <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}}  width={300} height={250} alt=""/> */}
       </motion.div>
 
@@ -105,8 +111,12 @@ export default function Home() {
         <div className={styles.textBoxBottom}>
           <div className={styles.notes}>
             <div className={styles.notesHeader}>Controls</div>
-            <p>A simple, modern, and accessible UI framework for Next.js.A simple, modern, and accessible UI framework.</p>
-            <p>A simple, <code className={styles.code}>modern</code>, and accessible</p>
+            <li><code className={styles.code}>Ctrl</code> + <code className={styles.code}>K</code> for center stage.</li>
+            <li>Press arrows for Docs + Demo.</li>
+            <li>Try dragging the broswer tabs:)</li>
+            <p>uiaftersex is open-source.</p>
+            <AiFillGithub style={{marginTop:10}} color="black" size={20}/>
+            {/* <p>A simple, <code className={styles.code}>modern</code>, and accessible</p> */}
           </div>
         </div>
       </motion.div>
@@ -114,16 +124,23 @@ export default function Home() {
       <motion.div ref={targetRef} style={{y:-1000, x: innerWidth < 800 ? 500 : 0}} className={styles.logoBox}>
         <div className={styles.header}>
             <h7>uiaftersex</h7>
-            <div onClick={() => {handleButtonClick("/peek")}}><ImCommand size={25}></ImCommand></div>
+            <div><ImCommand size={25}></ImCommand></div>
         </div>
         <div className={styles.description}>
           <p>A simple, modern, and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
           <p>A simple, modern, and <span>accessible UI framework for Next.js A simple</span> modern, and accessible UI framework for Next.js. </p>
         </div> 
+        
         <div className={styles.footer}>
-          {/* <p>Built by <span>Tanay</span>✌</p> */}
-          <p><span>*signature*</span></p>
+          <p>crafted by</p>
+            <div className={styles.social}>
+             
+              <User scale={0.8} src='https://pbs.twimg.com/profile_images/1659708484953477120/1UWxbIeX_400x400.jpg' name="tanay"></User>
+              <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
+              <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
+            </div> 
         </div>
+        
       </motion.div>
 
 

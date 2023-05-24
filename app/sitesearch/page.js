@@ -9,6 +9,8 @@ import { useRouter } from 'next/navigation';
 import CommandMenuSiteSearch from '@/components/sitesearch/command';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
+import { User } from '@geist-ui/core';
+
 
 export default function Home() {
   const router = useRouter();
@@ -39,9 +41,9 @@ export default function Home() {
 
         <div className={styles.container}>
           <div className={styles.scrollBox}>
-          <motion.div  whileHover={{scale:0.9, transition:{duration:0.1}}} transition={{duration:0.3}} className={styles.display}><p>Site Search</p></motion.div>
-          <motion.div  onClick={() => {handleButtonClick("/peek")}} whileHover={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Peek</p></motion.div>
-          <motion.div  onClick={() => {handleButtonClick("/linkpreviews")}} whileHover={{scale:0.9, transition:{duration:0.1}}} transition={{duration:0.3}} className={styles.display}><p>Link Previews</p></motion.div>
+          <motion.div  whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Site Search</p></motion.div>
+          <motion.div  onClick={() => {handleButtonClick("/peek")}} whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Peek</p></motion.div>
+          <motion.div  onClick={() => {handleButtonClick("/linkpreviews")}} whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Link Previews</p></motion.div>
           </div>
           <div className={styles.stick}></div>
         </div>
@@ -73,16 +75,16 @@ export default function Home() {
             <li><code className={styles.code}>React</code></li>
             <p>A simple, modern, <code className={styles.code}>Hello</code> and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
           </div> 
-          
         </div>
-
+        <hr className={styles.hr}></hr>
         <div className={styles.footer}>
-            <hr className={styles.hr}></hr>
-            <p>Built by <span>Tanay</span>❤️‍🩹</p>
+          <p>crafted by</p>
             <div className={styles.social}>
-              <div className={styles.socialicon}><VscTwitter  size={17}/></div>
-              <div className={styles.socialicon}><AiFillGithub size={17}/></div>
-            </div>
+              <a href='https://twitter.com/tanaydesaii'>
+              <User scale={0.8} src='https://pbs.twimg.com/profile_images/1659708484953477120/1UWxbIeX_400x400.jpg' name="tanay"></User></a> 
+              <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
+              <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
+            </div> 
         </div>
 
       </div>
