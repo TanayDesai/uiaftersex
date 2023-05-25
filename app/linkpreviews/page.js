@@ -8,8 +8,7 @@ import { useRouter } from 'next/navigation';
 import All from '@/components/linkpreviews/All';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import { User } from '@geist-ui/core';
-import { GeistProvider, CssBaseline } from '@geist-ui/core'
+import avatar from "../../assests/avatar2.png"
 
 
 export default function Home() {
@@ -21,11 +20,10 @@ export default function Home() {
 
 
   return (
-  <GeistProvider>
     <div className={styles.main}>
       <div className={styles.content}>
 
-        <div className={styles.box}><All /></div>
+        <div className={styles.box} style={{background: "radial-gradient(at center bottom, #D08C85, #67E8CF)"}}><All /></div>
 
         <div className={styles.container}>
           <div className={styles.scrollBox}>
@@ -43,25 +41,25 @@ export default function Home() {
             {/* <div><ImCommand size={25}></ImCommand></div> */}
           </div>
           <div className={styles.description}>
-            <p>A simple, modern, and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
+            <p>Sometimes you just don't care about a site enought to open their link, but are somewhat guiltiy curious? These allow you to just see what's cooking without any shame.</p>
           </div> 
 
           <div className={styles.subHeader}>
             <h7>Gist</h7>
           </div>
           <div className={styles.description}>
-            <p>A simple, modern, <code className={styles.code}>Hello</code> and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
-            <p>A simple, modern, and <span>accessible UI framework for Next.js A simple</span> modern, and accessible UI <code className={styles.code}>Ctrl</code> + <code className={styles.code}>K</code> for Next.js. </p>
+            <p>This works simply by taking a screenshot of all important links in a page, saving them, ready to be viewd when hovered over.</p>
+            <p>A light-weight shortcut to a very simple & tiny problem.</p>
           </div> 
 
           <div className={styles.subHeader}>
             <h7>Resources</h7>
           </div>
           <div className={styles.description}>
-            <li><code className={styles.code}>React</code></li>
-            <li><code className={styles.code}>React</code></li>
-            <li><code className={styles.code}>React</code></li>
-            <p>A simple, modern, <code className={styles.code}>Hello</code> and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
+            <li><code className={styles.code}>React + Next.js</code></li>
+            <li><code className={styles.code}>framer-motion</code></li>
+            <li>ScreenshotAPI </li>
+            <p>courtesy of <a href='https://uiw.tf/link-preview'>rauno</a> ❤️‍🩹</p>
           </div> 
           
         </div>
@@ -70,8 +68,7 @@ export default function Home() {
         <div className={styles.footer}>
           <p>crafted by</p>
             <div className={styles.social}>
-              <a href='https://twitter.com/tanaydesaii'>
-              <User scale={0.8} src='https://pbs.twimg.com/profile_images/1659708484953477120/1UWxbIeX_400x400.jpg' name="tanay"></User></a> 
+              <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image><p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
               <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
               <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
             </div> 
@@ -79,6 +76,5 @@ export default function Home() {
 
       </div>
     </div>
-  </GeistProvider>
   )
 }

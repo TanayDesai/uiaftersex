@@ -11,11 +11,11 @@ import signature from "../assests/signature2.svg"
 import avatar from "../assests/avatar2.png"
 import {motion} from "framer-motion";
 import useWindowSize from "@rooks/use-window-size"
-import { useRouter } from 'next/navigation'; 
-import { User } from '@geist-ui/core';
+import { useRouter } from 'next/navigation';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import { GeistProvider, CssBaseline } from '@geist-ui/core'
+
+
 
 export default function Home() {
   const router = useRouter();
@@ -56,10 +56,9 @@ export default function Home() {
       }, [])
 
   return (
-  <GeistProvider>
     <div className={styles.main}>
      <motion.div drag dragMomentum={false} style={{backgroundColor:"white",x: innerWidth < 900 ? 100 : 200,y:150}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
-        <div className={styles.displayBar}>
+        <div onClick={() => {handleButtonClick("/sitesearch")}} className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
           <div className={styles.displayBarIcon}></div>
           <div className={styles.displayBarIcon}></div>
@@ -72,7 +71,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div drag dragMomentum={false} style={{x: innerWidth > 900 ? 300 : 800 > innerWidth ? 400 : 0,y: innerHeight < 650 ? 300 :200,background: "#C37158",background: "radial-gradient(at center bottom, #D08C85, #67E8CF)"}} initial={{scale:0.7}} whileHover={{scale:0.709, transition:{duration:0.2}}} className={styles.display}>
-        <div className={styles.displayBar}>
+        <div onClick={() => {handleButtonClick("/linkpreviews")}} className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
           <div className={styles.displayBarIcon}></div>
           <div className={styles.displayBarIcon}></div>
@@ -86,7 +85,7 @@ export default function Home() {
       </motion.div> 
 
       <motion.div drag dragMomentum={false} style={{background:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))", y: innerHeight > 650 ? 10 : -20, x: innerWidth  < 1250 && 600 < innerWidth ? 900 : 600 > innerWidth && 1250 > innerWidth ? 1000 : 1340}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
-        <div className={styles.displayBar}>
+        <div onClick={() => {handleButtonClick("/peek")}} className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
             <div className={styles.displayBarIcon}></div>
             <div className={styles.displayBarIcon}></div>
@@ -113,10 +112,10 @@ export default function Home() {
           <div className={styles.notes}>
             <div className={styles.notesHeader}>Controls</div>
             <li><code className={styles.code}>Ctrl</code> + <code className={styles.code}>K</code> for center stage.</li>
-            <li>Press arrows for Docs + Demo.</li>
+            <li>Press arrows/search-bar for Demo + Docs.</li>
             <li>Try dragging the broswer tabs:)</li>
-            <p>uiaftersex is open-source.</p>
-            <AiFillGithub style={{marginTop:10}} color="black" size={20}/>
+            <p>PS: uiaftersex is open-source. 👇</p>
+            <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginTop:10}} color="black" size={20}/></a> 
             {/* <p>A simple, <code className={styles.code}>modern</code>, and accessible</p> */}
           </div>
         </div>
@@ -128,15 +127,14 @@ export default function Home() {
             <div><ImCommand size={25}></ImCommand></div>
         </div>
         <div className={styles.description}>
-          <p>A simple, modern, and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
-          <p>A simple, modern, and <span>accessible UI framework for Next.js A simple</span> modern, and accessible UI framework for Next.js. </p>
+          <p>an intiuitive laboratory canvas that showcases uniquely crafted <span>user interfaces & interactions</span> that make you wanna (hopefully) come back to, <span>  after sex</span>.❤️‍🩹</p>
+          <p>all peices aim to feel good, make you do less, inspire to build more or just some <span>"fuck-it why not"s</span>.</p>
         </div> 
         
         <div className={styles.footer}>
           <p>crafted by</p>
             <div className={styles.social}>
-             
-              <User scale={0.8} src='https://pbs.twimg.com/profile_images/1659708484953477120/1UWxbIeX_400x400.jpg' name="tanay"></User>
+              <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image><p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
               <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
               <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
             </div> 
@@ -146,6 +144,6 @@ export default function Home() {
 
 
     </div>
-  </GeistProvider>
+ 
   )
 }

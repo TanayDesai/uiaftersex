@@ -1,5 +1,8 @@
 @font-face {
   font-family: 'LufgaBlack';
+  font-display: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   src: local('LufgaBlack'), url("../assests/LufgaLight.ttf") format('truetype');
 }
 

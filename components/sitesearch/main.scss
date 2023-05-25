@@ -269,7 +269,10 @@ a {
       overflow: auto;
       overscroll-behavior: contain;
       transition: 100ms ease;
-      transition-property: height;
+      transition-property: height;      
+    }
+    [cmdk-list]::-webkit-scrollbar{
+      display: none;
     }
   
     [cmdk-vercel-shortcuts] {

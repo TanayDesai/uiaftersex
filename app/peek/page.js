@@ -9,23 +9,28 @@ import { useRouter } from 'next/navigation';
 import Peek from '@/components/peek/peek';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import { User } from '@geist-ui/core';
-import { GeistProvider, CssBaseline } from '@geist-ui/core'
-
+import starship from "../../assests/images/starship.png"
+import avatar from "../../assests/avatar2.png"
 
 export default function Home() {
   const router = useRouter();
+  const [popUpValue, setPopUpValue] = useState('');
 
   const handleButtonClick = (name) => {
     router.push(name);
   }
 
-  return (
-  <GeistProvider>  
+  const divVariants = {
+    hidden: { scaleY: 0, originY: 1, y: -140, x:50  },
+    visible: { scaleY: 1, originY: 1, y: -140,x:50  },
+    collapsed: { scaleY: 0, originY: 1, y: -140 ,x:50  }
+      };
+
+  return ( 
     <div className={styles.main}>
       <div className={styles.content}>
 
-        <div className={styles.box}><Peek /></div>
+        <div className={styles.box} style={{background:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))",}}><Peek /></div>
 
         <div className={styles.container}>
           <div className={styles.scrollBox}>
@@ -43,35 +48,55 @@ export default function Home() {
             {/* <div><ImCommand size={25}></ImCommand></div> */}
           </div>
           <div className={styles.description}>
-            <p>A simple, modern, and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
+            <p>A simple and accessible way to view a website without the need to open it in a new tab.</p>
           </div> 
 
           <div className={styles.subHeader}>
             <h7>Gist</h7>
           </div>
           <div className={styles.description}>
-            <p>A simple, modern, <code className={styles.code}>Hello</code> and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
-            <p>A simple, modern, and <span>accessible UI framework for Next.js A simple</span> modern, and accessible UI <code className={styles.code}>Ctrl</code> + <code className={styles.code}>K</code> for Next.js. </p>
+            <p>Peek allows you to quickly open & view links anywhere on the internet without clustering your tab bar.</p>
           </div> 
 
           <div className={styles.subHeader}>
             <h7>Resources</h7>
           </div>
           <div className={styles.description}>
-            <li><code className={styles.code}>React</code></li>
-            <li><code className={styles.code}>React</code></li>
-            <li><code className={styles.code}>React</code></li>
-            <p>A simple, modern, <code className={styles.code}>Hello</code> and accessible UI framework for Next.js.A simple, modern, and accessible UI framework. </p>
-          </div> 
-          
+            <li><code className={styles.code}>React + Next.js</code></li>
+            <li><code className={styles.code}>framer-motion</code></li>
+            <li><code className={styles.code}>Electron.js</code> (for webview)</li>
+            {/* <motion.div
+                        initial="collapsed"
+                        animate={popUpValue ? 'visible' : 'hidden'}
+                        variants={divVariants}
+                        transition={{ duration: 0.2 }}
+                        style={{
+                        position: 'absolute',
+                        borderRadius:"10px",
+                        backgroundColor:"white",
+                        margin:"auto",
+                        color:"white",
+                        width:"250px",
+                        alignItems:"center",
+                        height:"160px",
+                        textAlign:"center",
+                        justifyContent:"center",
+                        padding: '5px',
+                        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.4)',
+                        zIndex: 2
+                }}
+            >
+              <Image style={{borderRadius:"12px",margin:"auto"}} src={starship} width={240} height={150}></Image>
+            </motion.div> */}
+            <p>Inspired by <a href='https://thebrowser.company/' onMouseEnter={() => setPopUpValue('Pop-up content')} onMouseLeave={() => setPopUpValue('')}> thebrowsercompany</a>'s (yes again, they make some cool shit) peek & iOS web previews ❤️‍🩹</p>
+          </div>      
         </div>
 
         <hr className={styles.hr}></hr>
         <div className={styles.footer}>
           <p>crafted by</p>
             <div className={styles.social}>
-              <a href='https://twitter.com/tanaydesaii'>
-              <User scale={0.8} src='https://pbs.twimg.com/profile_images/1659708484953477120/1UWxbIeX_400x400.jpg' name="tanay"></User></a> 
+              <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image><p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
               <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
               <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
             </div> 
@@ -79,6 +104,5 @@ export default function Home() {
 
       </div>
     </div>
-  </GeistProvider>
   )
 }
