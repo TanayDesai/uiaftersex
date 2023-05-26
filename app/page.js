@@ -57,6 +57,7 @@ export default function Home() {
 
   return (
     <div className={styles.main}>
+
      <motion.div drag dragMomentum={false} style={{backgroundColor:"white",x: innerWidth < 900 ? 100 : 200,y:150}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
         <div onClick={() => {handleButtonClick("/sitesearch")}} className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
@@ -140,11 +141,8 @@ export default function Home() {
               <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
             </div> 
         </div>
-        
       </motion.div>
 
-
-    </div>
- 
+    </div> 
   )
 }

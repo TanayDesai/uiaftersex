@@ -11,10 +11,13 @@ import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
 import starship from "../../assests/images/starship.png"
 import avatar from "../../assests/avatar2.png"
+import {FiAlertOctagon} from 'react-icons/fi'
+import {BsChevronDown, BsChevronUp} from 'react-icons/bs'
 
 export default function Home() {
   const router = useRouter();
   const [popUpValue, setPopUpValue] = useState('');
+  const [open, setOpen] = useState(false);
 
   const handleButtonClick = (name) => {
     router.push(name);
@@ -49,6 +52,8 @@ export default function Home() {
           </div>
           <div className={styles.description}>
             <p>A simple and accessible way to view a website without the need to open it in a new tab.</p>
+            <motion.p whileHover={{backgroundColor:"#f0f0f0"}} onTap={() => setOpen(!open)} className={styles.note}><span>Warning</span>{!open && <BsChevronDown  style={{marginLeft:"5px"}} size={15}/>}{open && <BsChevronUp  style={{marginLeft:"5px"}} size={15}/>}</motion.p>
+            <div>{open && <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.4}} className={styles.note}><FiAlertOctagon size={30} style={{marginRight:"5px"}}/><span>The Website screenshot will be replaced by an actual webview in an Electron app, locally, after downloading the repo. Since React does not support webviews on web. You can still check the demo on the main page.</span></motion.p>}</div>
           </div> 
 
           <div className={styles.subHeader}>

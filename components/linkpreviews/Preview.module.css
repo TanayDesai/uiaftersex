@@ -1,17 +1,22 @@
 .cont {
-    
     margin: auto;
-  
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
+
+@font-face {
+font-family: 'LufgaBlack';
+src: local('LufgaBlack'), url("../../assests/LufgaLight.ttf") format('truetype');
+/* src: local('LufgaBlack'), url("../assests/Allenoire\ Font.otf") format("truetype"); */
+}
+
 
 .underlineAnimation {
     position: relative;
-    /* display: inline-block; */
     width: 60px;
     margin: auto;
-    /* margin: 20px; */
+    font-family: "LufgaBlack";
+    font-weight: 700;
   }
   
   .underlineAnimation::after {

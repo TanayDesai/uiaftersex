@@ -6,10 +6,10 @@ import reflect from "../../assests/images/reflect.png";
 import apple2 from "../../assests/images/apple2.png";
 
 const weblinks = [
-    {
-        name: "Apple",
-        img: apple2
-    },
+    // {
+    //     name: "Apple",
+    //     img: apple2
+    // },
     {
         name: "SpaceX",
         img: starship
@@ -18,10 +18,10 @@ const weblinks = [
     //     name: "Vercel",
     //     img: vercel
     // },
-    // {
-    //     name: "Reflect",
-    //     img: reflect
-    // }
+    {
+        name: "Reflect",
+        img: reflect
+    }
 ]
 
 const All = () => {
