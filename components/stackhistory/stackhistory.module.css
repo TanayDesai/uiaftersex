@@ -1,0 +1,49 @@
+.webview::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: none;
+}
+
+.webview {
+    border-radius: 17px;
+    height:455px;
+    overflow:hidden;
+    width: 100%;
+    margin:auto;
+    margin-top:2px;
+}
+
+.card {
+    margin: auto;
+    left: 18%;
+    scale:1.1;
+   /* marginTop:50px; */
+    position: absolute;
+    min-width: 63%;
+    height: 250px;
+    border-radius: 8px;
+    transform-origin: top center;
+}
+
+.card2 {
+    margin: auto;
+    left:18%;
+    margin-top:300px;
+    position: absolute;
+    min-width: 63%;
+    height: 450px;
+    border-radius: 8px;
+    transform-origin: top center,
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+      left: 33%;
+      min-width: 34%;
+      max-width: 50%;
+    }
+    .card2 {
+        left: 33%;
+        min-width: 34%;
+        max-width: 50%;
+    }
+}
