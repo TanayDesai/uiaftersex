@@ -35,10 +35,10 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.scrollBox}>
           <motion.div  whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Peek</p></motion.div>
-          <motion.div  onClick={() => {handleButtonClick("/sitesearch")}} whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Site Search</p></motion.div>
+          <motion.div  onClick={() => {handleButtonClick("/sitesearch")}} whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Web + ⌘ K</p></motion.div>
           <motion.div  onClick={() => {handleButtonClick("/linkpreviews")}} whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Link Previews</p></motion.div>
           </div>
-          <div className={styles.stick}></div>
+          {/* <div className={styles.stick}></div> */}
         </div>
 
         <div className={styles.blog}>

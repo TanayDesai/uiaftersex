@@ -64,7 +64,7 @@ export default function Home() {
           <div className={styles.displayBarIcon}></div>
           <div className={styles.displayBarIcon}></div>
         </div>
-        <div className={styles.displayBarSearchBox}>Site Search + ⌘</div>
+        <div className={styles.displayBarSearchBox}>Web + ⌘ K</div>
           <motion.div onClick={() => {handleButtonClick("/sitesearch")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
         <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}} src={myGif} width={300} height={250} alt=""/>
@@ -111,7 +111,7 @@ export default function Home() {
         <div className={styles.textBoxBottom}>
           <div className={styles.notes}>
             <div className={styles.notesHeader}>Controls</div>
-            <li><code className={styles.code}>Ctrl</code> + <code className={styles.code}>K</code> for center stage.</li>
+            <li><code className={styles.code}>Ctrl/Cmd</code> + <code className={styles.code}>K</code> for center stage.</li>
             <li>Press arrows/search-bar for Demo + Docs.</li>
             <li>Try dragging the broswer tabs:)</li>
             <p>PS: uiaftersex is open-source. 👇</p>
@@ -124,17 +124,18 @@ export default function Home() {
       <motion.div ref={targetRef} style={{y:-1000, x: innerWidth < 800 ? 500 : 0}} className={styles.logoBox}>
         <div className={styles.header}>
             <h7>uiaftersex</h7>
-            <div><ImCommand size={25}></ImCommand></div>
+            {/* <div><ImCommand size={25}></ImCommand></div> */}
         </div>
         <div className={styles.description}>
           <p>an intiuitive laboratory canvas that showcases uniquely crafted <span>user interfaces & interactions</span> that make you wanna (hopefully) come back to, <span>  after sex</span>.❤️‍🩹</p>
-          <p>all peices aim to feel good, make you do less, inspire to build more or just some <span>"fuck-it why not"s</span>.</p>
+          <p>all peices aim to feel good, inspire to build more or just some <span>"fuck-it why not"s</span>.</p>
         </div> 
         
         <div className={styles.footer}>
           <p>crafted by</p>
             <div className={styles.social}>
-              <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image><p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
+              <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image>
+              <p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
               <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
               <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
             </div> 

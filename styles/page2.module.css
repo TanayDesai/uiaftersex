@@ -1,6 +1,17 @@
 @font-face {
   font-family: 'LufgaBlack';
   src: local('LufgaBlack'), url("../assests/LufgaLight.ttf") format('truetype');
+  /* src: local('LufgaBlack'), url("../assests/Allenoire\ Font.otf") format("truetype"); */
+}
+
+@font-face {
+  font-family: 'Calming';
+  font-display: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  /* src: local('Calming'), url("../assests/Allenoire\ Font.otf") format('truetype'); */
+  /* src: local('Calming'), url("../assests/Calming.ttf") format('truetype'); */
+  src: local('Calming'), url("../assests/Maglite.ttf") format('truetype');
 }
 
 .main {
@@ -15,7 +26,7 @@
   /* background-color: antiquewhite; */
   margin: auto;
   padding: 10px;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .container{
@@ -26,7 +37,7 @@
   border-radius: 15px;
   margin-top: 20px;
   cursor:e-resize;
-  /* box-shadow: 0 16px 70px rgb(0 0 0 / 10%); */
+  box-shadow: 0 16px 70px rgb(0 0 0 / 10%);
 }
 
 .scrollBox {
@@ -44,7 +55,6 @@
   display: flex;
   min-width: 280px;
   margin: 10px;
-  /* box-shadow: 0 16px 70px rgb(0 0 0 / 10%); */
   scroll-snap-align: center;
 }
 
@@ -52,7 +62,7 @@
   margin: auto;
   text-align: center;
   word-wrap: break-word;
-  font-family: 'LufgaBlack';
+  /* font-family: 'LufgaBlack'; */
   word-break:keep-all;
   white-space: nowrap;
   /* background-color: antiquewhite; */
@@ -74,7 +84,7 @@
 }
 
 .box {
-  max-width: 632px;
+  max-width: 635px;
   height: 500px;
   background-color: rgb(220, 220, 220);
   margin: auto;
@@ -96,7 +106,7 @@
   display: flex;
   font-weight: 700;
   color:#000;
-  font-family: "LufgaBlack";
+  font-family: "Calming";
 }
 
 .subHeader {
@@ -119,12 +129,12 @@
 .description a {
   position: relative;
   color: #000;
-  width: 60px;
-  font-style: italic;
+  /* width: 60px; */
+  /* font-style: italic; */
   margin: auto;
   /* text-decoration: underline; */
 }
-/* 
+
 .description a::after {
   content: '';
   position: absolute;
@@ -139,14 +149,15 @@
 
 .description a:hover::after {
   transform: scaleX(1);
-} */
+}
 
 .description p {
   margin-top: 22px;
   color: #666666;
   font-size: 14px;
   line-height: 25px;
-  font-weight: 500;
+  font-family: "LufgaBlack";
+  font-weight: 700;
   /* background-color: aqua; */
 }
 
