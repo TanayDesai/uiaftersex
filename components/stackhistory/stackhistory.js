@@ -13,15 +13,15 @@ const CARD_COLORS = [gradient,"black","grey","red","green"];
 
 const StackCards = () => {
     const [cards, setCards] = useState(CARD_COLORS);
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
     const [selected, setSelected] = useState(cards[0])
     
     const moveToEnd = from => {
-        if (!selected) {
+      
         setCards(move(cards, from, 0));
         setOpen(false)
         setSelected(cards[from])
-        }
+        
     };
    
     useEffect(() => {
@@ -75,7 +75,7 @@ const StackCards = () => {
             );
             })}
 
-            {selected && <motion.div
+            {selected && !open && <motion.div
                     style={{
                         background: selected,
                     }}

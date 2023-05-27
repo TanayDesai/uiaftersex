@@ -91,6 +91,10 @@
   background-color: rgb(220, 220, 220);
   margin: auto;
   box-shadow: 0 16px 70px rgb(0 0 0 / 20%);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* display: flex; */
   border-radius: 15px;
 }
 

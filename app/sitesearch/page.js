@@ -44,7 +44,10 @@ export default function Home() {
       {open && <CommandMenuSiteSearch className={styles.menu}></CommandMenuSiteSearch>} 
       <div className={styles.content}>
 
-        <div className={styles.box} style={{backgroundColor:"white",color:"black"}}><h1>Click K</h1> <ImCommand color='black' onClick={() => {setOpen(true)}} size={25}></ImCommand></div>
+        <div className={styles.box} style={{backgroundColor:"white",color:"black", paddingTop: "200px"}}>
+          <ImCommand style={{width:"100%"}} color='black' onClick={() => {setOpen(true)}} size={25}></ImCommand>
+          <h4>Click me</h4>
+        </div>
 
         <div className={styles.container}>
           <div className={styles.scrollBox}>
@@ -63,6 +66,7 @@ export default function Home() {
           </div>
           <div className={styles.description}>
             <p>Site Search combines a<code className={styles.code}><ImCommand size={15}/></code> + <code className={styles.code}>K</code> box & Arc's site search feature into a quick & easy way to broswe the web.</p>
+            <p>Click Ctrl/Cmd + K or <span onClick={() => {setOpen(true)}}>⌘</span></p>
           </div> 
 
           <div className={styles.subHeader}>
