@@ -54,7 +54,7 @@ export default function Home() {
             <h7>Gist</h7>
           </div>
           <div className={styles.description}>
-            <p>Peek allows you to quickly open & view links anywhere on the internet without clustering your tab bar.</p>
+            <p>Peek allows you to quickly open & view links anywhere, to peek right through on the internet without clustering your tab bar.</p>
           </div> 
 
           <div className={styles.subHeader}>

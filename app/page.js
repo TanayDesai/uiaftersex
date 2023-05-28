@@ -123,7 +123,7 @@ export default function Home() {
       </motion.div>
       
       <motion.div drag dragMomentum={false} style={{x: innerWidth > 900 ? 600 : 800 > innerWidth ? 400 : 0,y: innerHeight < 650 ? 300 :-1400,background: "#C37158",background: "radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))"}} initial={{scale:0.7}} whileHover={{scale:0.709, transition:{duration:0.2}}} className={styles.display}>
-        <div onClick={() => {handleButtonClick("/linkpreviews")}} className={styles.displayBar}>
+        <div onClick={() => {handleButtonClick("/stack")}} className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
           <div className={styles.displayBarIcon}></div>
           <div className={styles.displayBarIcon}></div>

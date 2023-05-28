@@ -62,7 +62,7 @@ export default function Home() {
             <h7>Gist</h7>
           </div>
           <div className={styles.description}>
-            <p>Peek allows you to quickly open & view links anywhere on the internet without clustering your tab bar.</p>
+            <p>Stack is a concept which brings animations & some different interactivity to your old boring search histories to explore new & fun ways of broswering the web.</p>
           </div> 
 
           <div className={styles.subHeader}>
