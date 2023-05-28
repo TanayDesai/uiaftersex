@@ -9,7 +9,6 @@ import { useRouter } from 'next/navigation';
 import CommandMenuSiteSearch from '@/components/sitesearch/command';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import starship from "../../assests/images/starship.png"
 import avatar from "../../assests/avatar2.png"
 
 export default function Home() {
