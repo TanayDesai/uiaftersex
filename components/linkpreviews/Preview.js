@@ -26,7 +26,7 @@ const Preview = ({img, name}) => {
                         borderRadius:"10px",
                         margin:"auto",
                         color:"white",
-                        width:"250px",
+                        width:"255px",
                         alignItems:"center",
                         height:"160px",
                         textAlign:"center",
@@ -38,7 +38,7 @@ const Preview = ({img, name}) => {
                 }}
             >
                 {/* <p>BOX BOX BOX </p> */}
-                <Image style={{borderRadius:"12px",margin:"auto"}} src={img} width={240} height={150}></Image>
+                <Image style={{borderRadius:"12px",margin:"auto"}} src={img} width={245} height={150}></Image>
             </motion.div>
           
             <p className={styles.underlineAnimation}

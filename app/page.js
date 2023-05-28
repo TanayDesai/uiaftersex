@@ -82,7 +82,7 @@ export default function Home() {
           <motion.div onClick={() => {handleButtonClick("/linkpreviews")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
         
-         <Image src={link} style={{display:"flex",marginTop:"40px",margin:'auto',pointerEvents:'none'}} width={350} height={200} alt=""/>
+         <Image src={link} style={{display:"flex",margin:'auto',marginTop:"40px",pointerEvents:'none'}} width={350} height={200} alt=""/>
       </motion.div> 
 
       <motion.div drag dragMomentum={false} style={{background:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))", y: innerHeight > 650 ? 10 : -20, x: innerWidth  < 1250 && 600 < innerWidth ? 900 : 600 > innerWidth && 1250 > innerWidth ? 1000 : 1340}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
@@ -151,8 +151,8 @@ export default function Home() {
             <div className={styles.social}>
               <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image>
               <p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
-              <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
-              <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
+              <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}}  size={20}/></a>
+              <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} size={20}/></a>
             </div> 
         </div>
       </motion.div>
