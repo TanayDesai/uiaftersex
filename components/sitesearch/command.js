@@ -1,17 +1,19 @@
 import { Command } from 'cmdk'
 import "./main.scss"
 import React from 'react'
-const websites = {'Twitter':"https://twitter.com/search?q=", 'Youtube':"https://www.youtube.com/results?search_query=", 'Spotify':"https://open.spotify.com/search/", "GitHub":"https://github.com/search?q=","Suprise":"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}
+import { useRouter } from 'next/navigation';
 
+
+const websites = {'Twitter':"https://twitter.com/search?q=", 'Youtube':"https://www.youtube.com/results?search_query=", 'Spotify':"https://open.spotify.com/search/", "GitHub":"https://github.com/search?q=","Suprise":"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}
 
 export default function CommandMenuSiteSearch() {
   const ref = React.useRef(null)
   const [inputValue, setInputValue] = React.useState('')
   const [site, setSite] = React.useState(false)
- 
   const [pages, setPages] = React.useState(['home'])
   const activePage = pages[pages.length - 1]
   const isHome = activePage === 'home'
+
   const popPage = React.useCallback(() => {
     setPages((pages) => {
       const x = [...pages]
@@ -25,7 +27,6 @@ export default function CommandMenuSiteSearch() {
       if (isHome || inputValue.length) {
         return
       }
-
       if (e.key === 'Backspace') {
         e.preventDefault()
         popPage()
@@ -133,12 +134,9 @@ function Home({ searchProjects, searchSites }) {
           <ProjectsIcon />
           Search Projects...
         </Item>
-        <Item>
-          <PlusIcon />
-          Create New Project...
-        </Item>
       </Command.Group>
-      <Command.Group heading="Sites">
+
+      <Command.Group heading="Search Inside">
         <Item
           shortcut="S P"
           onSelect={() => {
@@ -184,50 +182,35 @@ function Home({ searchProjects, searchSites }) {
           <SearcIcon />
           Surpirse
         </Item>
-        <Item>
-          <PlusIcon />
-          Create New Sites...
-        </Item>
-        
       </Command.Group>
 
-      {/* <Command.Group heading="Teams">
-        <Item shortcut="⇧ P">
-          <TeamsIcon />
-          Search Teams...
-        </Item>
-        <Item>
-          <PlusIcon />
-          Create New Team...
-        </Item>
-      </Command.Group>
-      <Command.Group heading="Help">
+      
+      <Command.Group heading="Social">
         <Item shortcut="⇧ D">
-          <DocsIcon />
-          Search Docs...
+          <TwitterIcon />
+          <a href='https://twitter.com/tanaydesaii'>@tanaydesaii</a>
         </Item>
         <Item>
-          <FeedbackIcon />
-          Send Feedback...
+          <GitHubIcon />
+          <a href='https://github.com/TanayDesai'>@TanayDesai</a>
         </Item>
-        <Item>
-          <ContactIcon />
-          Contact Support
-        </Item>
-      </Command.Group> */}
+       
+      </Command.Group>
     </>
   )
 }
 
 function Projects() {
+  const router = useRouter();
+  const handleButtonClick = (name) => {
+    router.push(name);
+  }
+
   return (
     <>
-      <Item>Project 1</Item>
-      <Item>Project 2</Item>
-      <Item>Project 3</Item>
-      <Item>Project 4</Item>
-      <Item>Project 5</Item>
-      <Item>Project 6</Item>
+      <Item onSelect={() => {handleButtonClick("/peek")}}>Peek</Item>
+      <Item onSelect={() => {handleButtonClick("/stack")}}>Stack</Item>
+      <Item onSelect={() => {handleButtonClick("/linkpreviews")}}>Link Previews</Item>
     </>
   )
 }

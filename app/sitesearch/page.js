@@ -13,7 +13,6 @@ import avatar from "../../assests/avatar2.png"
 
 export default function Home() {
   const router = useRouter();
-  const [popUpValue, setPopUpValue] = useState('');
 
   const handleButtonClick = (name) => {
     router.push(name);
@@ -32,12 +31,6 @@ export default function Home() {
     return () => document.removeEventListener('keydown', down)
   })
 
-  const divVariants = {
-    hidden: { scaleY: 0, originY: 1, y: -140, x:50  },
-    visible: { scaleY: 1, originY: 1, y: -140,x:50  },
-    collapsed: { scaleY: 0, originY: 1, y: -140 ,x:50  }
-      };
-
   return (
     <div className={styles.main}>
       {open && <CommandMenuSiteSearch className={styles.menu}></CommandMenuSiteSearch>} 
@@ -45,7 +38,7 @@ export default function Home() {
 
         <div className={styles.box} style={{backgroundColor:"white",color:"black", paddingTop: "200px"}}>
           <ImCommand style={{width:"100%"}} color='black' onClick={() => {setOpen(true)}} size={25}></ImCommand>
-          <h4>Click me</h4>
+          <h4>Click 👆</h4>
         </div>
 
         <div className={styles.container}>
@@ -66,7 +59,7 @@ export default function Home() {
           </div>
           <div className={styles.description}>
             <p>Site Search combines a<code className={styles.code}><ImCommand size={15}/></code> + <code className={styles.code}>K</code> box & Arc's site search feature into a quick & easy way to broswe the web.</p>
-            <p>Click Ctrl/Cmd + K or <span onClick={() => {setOpen(true)}}>⌘</span></p>
+            <p>Click Ctrl/<span onClick={() => {setOpen(true)}}>⌘</span> + K.</p>
           </div> 
 
           <div className={styles.subHeader}>
@@ -81,32 +74,10 @@ export default function Home() {
             <h7>Resources</h7>
           </div>
           <div className={styles.description}>
+            <p>The code for this component is <a href='https://github.com/TanayDesai'>here</a>. This was made with:</p>
             <li><a href='https://cmdk.paco.me/'>cdmk box </a>by paco.</li>
             <li><code className={styles.code}>React + Next.js</code> for implementation.</li>
-            {/* <motion.div
-                        initial="collapsed"
-                        animate={popUpValue ? 'visible' : 'hidden'}
-                        variants={divVariants}
-                        transition={{ duration: 0.2 }}
-                        style={{
-                        position: 'absolute',
-                        borderRadius:"10px",
-                        backgroundColor:"white",
-                        margin:"auto",
-                        color:"white",
-                        width:"250px",
-                        alignItems:"center",
-                        height:"160px",
-                        textAlign:"center",
-                        justifyContent:"center",
-                        padding: '5px',
-                        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.4)',
-                        zIndex: 2
-                }}
-            >
-              <Image style={{borderRadius:"12px",margin:"auto"}} src={starship} width={240} height={150}></Image>
-            </motion.div> */}
-            <p>Inspired by <a href='https://thebrowser.company/' onMouseEnter={() => setPopUpValue('Pop-up content')} onMouseLeave={() => setPopUpValue('')}> thebrowsercompany</a>'s site search ❤️‍🩹</p>
+            <p>Inspired by <a href='https://thebrowser.company/'> thebrowsercompany</a>'s site search ❤️‍🩹</p>
           </div> 
         </div>
         
@@ -115,8 +86,8 @@ export default function Home() {
           <p>crafted by</p>
             <div className={styles.social}>
               <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image><p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
-              <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
-              <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
+              <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} size={20}/></a>
+              <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} size={20}/></a>
             </div> 
         </div>
 

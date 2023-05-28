@@ -18,10 +18,10 @@ const weblinks = [
     //     name: "Vercel",
     //     img: vercel
     // },
-    {
-        name: "Reflect",
-        img: reflect
-    }
+    // {
+    //     name: "Reflect",
+    //     img: reflect
+    // }
 ]
 
 const All = () => {

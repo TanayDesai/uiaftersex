@@ -4,8 +4,6 @@ import styles from '../styles/page.module.css'
 import React, {useState, useRef, useEffect} from 'react'
 import {ImCommand} from 'react-icons/im';
 import {HiArrowSmallRight} from "react-icons/hi2";
-import myGif from '../assests/site.gif'
-import myGif2 from '../assests/link.gif'
 import myGif3 from '../assests/peek.gif'
 import signature from "../assests/signature2.svg"
 import avatar from "../assests/avatar2.png"
@@ -15,7 +13,9 @@ import { useRouter } from 'next/navigation';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
 
-
+import site from "../assests/demos/sites.png"
+import link from "../assests/demos/link.png"
+import stack from "../assests/demos/stack.png"
 
 export default function Home() {
   const router = useRouter();
@@ -68,7 +68,7 @@ export default function Home() {
         <div className={styles.displayBarSearchBox}>Web + ⌘ K</div>
           <motion.div onClick={() => {handleButtonClick("/sitesearch")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
-        <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}} src={myGif} width={300} height={250} alt=""/>
+        <Image style={{display:"flex",margin:'auto',pointerEvents:'none'}} src={site} width={350} height={250} alt=""/>
       </motion.div>
 
       <motion.div drag dragMomentum={false} style={{x: innerWidth > 900 ? 300 : 800 > innerWidth ? 400 : 0,y: innerHeight < 650 ? 300 :200,background: "#C37158",background: "radial-gradient(at center bottom, #D08C85, #67E8CF)"}} initial={{scale:0.7}} whileHover={{scale:0.709, transition:{duration:0.2}}} className={styles.display}>
@@ -82,7 +82,7 @@ export default function Home() {
           <motion.div onClick={() => {handleButtonClick("/linkpreviews")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
         
-         <Image src={myGif2} style={{display:"flex",margin:'auto',pointerEvents:'none'}} width={300} height={200} alt=""/>
+         <Image src={link} style={{display:"flex",marginTop:"40px",margin:'auto',pointerEvents:'none'}} width={350} height={200} alt=""/>
       </motion.div> 
 
       <motion.div drag dragMomentum={false} style={{background:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))", y: innerHeight > 650 ? 10 : -20, x: innerWidth  < 1250 && 600 < innerWidth ? 900 : 600 > innerWidth && 1250 > innerWidth ? 1000 : 1340}} whileHover={{scale:1.009, transition:{duration:0.2}}}  className={styles.display}>
@@ -96,10 +96,10 @@ export default function Home() {
           <motion.div onClick={() => {handleButtonClick("/peek")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
         
-        <Image src={myGif3} style={{display:"flex",margin:'auto',pointerEvents:'none',borderRadius:"20px"}}  width={300} height={250} alt=""/>
+        {/* <Image src={myGif3} style={{display:"flex",margin:'auto',pointerEvents:'none',borderRadius:"20px"}}  width={300} height={250} alt=""/> */}
       </motion.div>
 
-      <motion.div drag dragMomentum={false} style={{x:  innerWidth < 1250 && 700 < innerWidth  ? 900 : innerWidth < 1250 && 600 > innerWidth ? 900 :  1400,y:innerHeight < 700 ? -900: -800}} className={styles.textBox} whileHover={{scale:1.008, transition:{duration:0.2}}}>
+      <motion.div drag dragMomentum={false} style={{x:  innerWidth < 1250 && 700 < innerWidth  ? 900 : innerWidth < 1250 && 600 > innerWidth ? 900 :  1200,y:innerHeight < 700 ? -900: -800}} className={styles.textBox} whileHover={{scale:1.008, transition:{duration:0.2}}}>
         <div className={styles.textBoxBar}>
           <div className={styles.displayBarIcons}>
             <div className={styles.displayBarIcon}></div>
@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </motion.div>
       
-      <motion.div drag dragMomentum={false} style={{x: innerWidth > 900 ? 700 : 800 > innerWidth ? 400 : 0,y: innerHeight < 650 ? 300 :-1300,background: "#C37158",background: "radial-gradient(at center bottom, #D08C85, #67E8CF)"}} initial={{scale:0.7}} whileHover={{scale:0.709, transition:{duration:0.2}}} className={styles.display}>
+      <motion.div drag dragMomentum={false} style={{x: innerWidth > 900 ? 600 : 800 > innerWidth ? 400 : 0,y: innerHeight < 650 ? 300 :-1400,background: "#C37158",background: "radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))"}} initial={{scale:0.7}} whileHover={{scale:0.709, transition:{duration:0.2}}} className={styles.display}>
         <div onClick={() => {handleButtonClick("/linkpreviews")}} className={styles.displayBar}>
           <div className={styles.displayBarIcons}>
           <div className={styles.displayBarIcon}></div>
@@ -133,7 +133,7 @@ export default function Home() {
           <motion.div onClick={() => {handleButtonClick("/stack")}} whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
         </div>
         
-         <Image src={myGif2} style={{display:"flex",margin:'auto',pointerEvents:'none'}} width={300} height={200} alt=""/>
+         <Image src={stack} style={{display:"flex",marginTop:"30px",margin:'auto',pointerEvents:'none'}} width={300} height={200} alt=""/>
       </motion.div> 
 
       <motion.div ref={targetRef} style={{y:-1300, x: innerWidth < 800 ? 500 : 0}} className={styles.logoBox}>

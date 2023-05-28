@@ -3,7 +3,7 @@
   font-display: auto;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  src: local('LufgaBlack'), url("../assests/LufgaLight.ttf") format('truetype');
+  src: local('LufgaBlack'), url("../assests/fonts/LufgaLight.ttf") format('truetype');
   /* src: local('LufgaBlack'), url("../assests/Allenoire\ Font.otf") format('truetype'); */
   /* src: local('LufgaBlack'), url("../assests/Allenoire\ Font.otf") format('truetype'); */
 }
@@ -15,7 +15,7 @@
   -webkit-font-smoothing: antialiased;
   /* src: local('Calming'), url("../assests/Allenoire\ Font.otf") format('truetype'); */
   /* src: local('Calming'), url("../assests/Calming.ttf") format('truetype'); */
-  src: local('Calming'), url("../assests/Maglite.ttf") format('truetype');
+  src: local('Calming'), url("../assests/fonts/Maglite.ttf") format('truetype');
 }
 
 

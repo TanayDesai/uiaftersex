@@ -6,7 +6,7 @@
 
 @font-face {
 font-family: 'LufgaBlack';
-src: local('LufgaBlack'), url("../../assests/LufgaLight.ttf") format('truetype');
+src: local('LufgaBlack'), url("../../assests/fonts/LufgaLight.ttf") format('truetype');
 /* src: local('LufgaBlack'), url("../assests/Allenoire\ Font.otf") format("truetype"); */
 }
 

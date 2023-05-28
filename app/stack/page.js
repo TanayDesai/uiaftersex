@@ -52,9 +52,10 @@ export default function Home() {
             {/* <div><ImCommand size={25}></ImCommand></div> */}
           </div>
           <div className={styles.description}>
-            <p>A simple and accessible way to view a website without the need to open it in a new tab.</p>
-            <motion.p whileHover={{backgroundColor:"#f0f0f0"}} onTap={() => setOpen(!open)} className={styles.note}><span>Warning</span>{!open && <BsChevronDown  style={{marginLeft:"5px"}} size={15}/>}{open && <BsChevronUp  style={{marginLeft:"5px"}} size={15}/>}</motion.p>
-            <div>{open && <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.4}} className={styles.note}><span>The Website screenshot will be replaced by an actual webview in an Electron app, locally, after downloading the repo. Since React does not support webviews on web. You can still check the demo on the main page.</span></motion.p>}</div>
+            <p>A quirky way to view your search history:) Stack allows you to smoothly switch between tabs & keep'em well organised.</p>
+            <p>To switch back to the stacked tabs you can also press Ctrl/<span>⌘</span> + K.</p>
+            <motion.p whileHover={{backgroundColor:"#f0f0f0"}} onTap={() => setOpen(!open)} className={styles.note}><span>Note</span>{!open && <BsChevronDown  style={{marginLeft:"5px"}} size={15}/>}{open && <BsChevronUp  style={{marginLeft:"5px"}} size={15}/>}</motion.p>
+            <div>{open && <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.4}} className={styles.note}><span>The Website screenshot can be replaced by an actual webview in an Electron app, locally, after downloading the repo. Since React does not support webviews on web & due to laggyness it wasn't included here.</span></motion.p>}</div>
           </div> 
 
           <div className={styles.subHeader}>
@@ -68,10 +69,10 @@ export default function Home() {
             <h7>Resources</h7>
           </div>
           <div className={styles.description}>
+          <p>The code for this component is <a href='https://github.com/TanayDesai'>here</a>. This was made with:</p>
             <li><code className={styles.code}>React + Next.js</code></li>
             <li><code className={styles.code}>framer-motion</code></li>
             <li><code className={styles.code}>Electron.js</code> (for webview)</li>
-            <p>Inspired by <a href='https://thebrowser.company/' onMouseEnter={() => setPopUpValue('Pop-up content')} onMouseLeave={() => setPopUpValue('')}> thebrowsercompany</a>'s (yes again, they make some cool shit) peek & iOS web previews ❤️‍🩹</p>
           </div>      
         </div>
 
@@ -80,8 +81,8 @@ export default function Home() {
           <p>crafted by</p>
             <div className={styles.social}>
               <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image><p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
-              <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} color="black" size={20}/></a>
-              <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} color="black" size={20}/></a>
+              <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}} size={20}/></a>
+              <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} size={20}/></a>
             </div> 
         </div>
 
