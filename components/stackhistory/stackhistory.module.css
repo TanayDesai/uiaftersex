@@ -1,27 +1,36 @@
-.webview::-webkit-scrollbar{
-    display: none;
-    scrollbar-width: none;
-}
 
 .webview {
-    border-radius: 17px;
-    height:455px;
-    overflow:hidden;
-    width: 100%;
-    margin:auto;
-    margin-top:2px;
+    border-radius: 20px;
+    /* height:auto; */
+    /* overflow:hidden; */
+    /* width: 200px; */
+    /* margin-top:2px; */
 }
-
+.cardImg {
+    margin: auto;
+    overflow-y: auto;
+    position: absolute;
+    max-width: 100%;
+    left: 0;
+    height: auto;
+    border-radius: 20px;
+}
 .card {
     margin: auto;
     left: 18%;
     scale:1.1;
    /* marginTop:50px; */
+    overflow-y: auto;
     position: absolute;
     min-width: 63%;
     height: 250px;
-    border-radius: 8px;
+    border-radius: 20px;
     transform-origin: top center;
+}
+
+.card::-webkit-scrollbar, .card2::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: none;
 }
 
 .card2 {
@@ -29,9 +38,10 @@
     left:18%;
     margin-top:300px;
     position: absolute;
+    overflow-y: auto;
     min-width: 63%;
     height: 350px;
-    border-radius: 8px;
+    border-radius: 20px;
     transform-origin: top center,
 }
 
@@ -45,5 +55,9 @@
         left: 33%;
         min-width: 34%;
         max-width: 50%;
+    }
+    .cardImg{
+        min-width: 34%;
+        max-width: 100%;
     }
 }

@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import Peek from '@/components/peek/peek';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import starship from "../../assests/images/starship.png"
+// import starship from "../../assests/peekimgs/starship.png"
 import avatar from "../../assests/avatar2.png"
 import {FiAlertOctagon} from 'react-icons/fi'
 import {BsChevronDown, BsChevronUp} from 'react-icons/bs'
@@ -39,6 +39,7 @@ export default function Home() {
           <div className={styles.scrollBox}>
           <motion.div  whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Peek</p></motion.div>
           <motion.div  onClick={() => {handleButtonClick("/sitesearch")}} whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Web + ⌘ K</p></motion.div>
+          <motion.div  onClick={() => {handleButtonClick("/stack")}} whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Stack</p></motion.div>
           <motion.div  onClick={() => {handleButtonClick("/linkpreviews")}} whileTap={{scale:0.9, transition:{duration:0.1}}} className={styles.display}><p>Link Previews</p></motion.div>
           </div>
           {/* <div className={styles.stick}></div> */}

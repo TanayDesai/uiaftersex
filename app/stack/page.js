@@ -10,7 +10,6 @@ import { useRouter } from 'next/navigation';
 import StackCards from '@/components/stackhistory/stackhistory';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import starship from "../../assests/images/starship.png"
 import avatar from "../../assests/avatar2.png"
 import {FiAlertOctagon} from 'react-icons/fi'
 import {BsChevronDown, BsChevronUp} from 'react-icons/bs'

@@ -2,6 +2,9 @@
 import React, {useState} from "react";
 import styles from "./index.module.css";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import peekImg from "../../assests/peekimgs/starship.png";
+
 
 const Peek = () => {
   const [open , setOpen] = useState(false)
@@ -24,9 +27,8 @@ const Peek = () => {
         </svg>
       </button>
       <div id="modalContent" className={styles.modalContent}>
-        {/* <p>dkdkhdk</p> */}
-        <webview src="https://arc.net/" className={styles.view}></webview>
-       
+        {/* <webview src="https://arc.net/" className={styles.view}></webview> */}
+        <Image className={styles.view} src={peekImg}></Image>
       </div>
     </motion.div>}
 

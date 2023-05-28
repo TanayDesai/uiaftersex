@@ -2,14 +2,18 @@ import React, { useRef,useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import move from "lodash-move";
 import styles from "./stackhistory.module.css";
-
+import spacex from "../../assests/stackimgs/spacex.png"
+import tesla from "../../assests/stackimgs/tesla.png"
+import apple from "../../assests/stackimgs/apple.png"
+import arc from "../../assests/stackimgs/arc.png"
+import Image from "next/image";
 
 const CARD_OFFSET = 50; 
 const SCALE_FACTOR = 0.06;
 const gradient = "linear-gradient(to top, #f430a5 40%, #cee5f1 100%)"
-const CARD_COLORS = [gradient,"black","grey","red","green"];
+// const CARD_COLORS = [gradient,"black","grey","red","green"];
 // const CARD_COLORS = ["https://www.spacex.com/","https://www.apple.com/","https://www.tesla.com/","https://thebrowser.company/", "https://uiw.tf/"];
-
+const CARD_COLORS = [spacex,apple,tesla,arc];
 
 const StackCards = () => {
     const [cards, setCards] = useState(CARD_COLORS);
@@ -48,11 +52,11 @@ const StackCards = () => {
                     key={link}
                     className={styles.card}
                     style={{
-                        background: link,
+                        // background: link,
                         cursor: canDrag ? "grab" : "auto"
                     }}
                     animate={{
-                    marginTop:"260px",
+                    marginTop:"220px",
                     top: index * -CARD_OFFSET,
                     scale: 1 - index * SCALE_FACTOR,
                     zIndex: CARD_COLORS.length - index,
@@ -67,22 +71,17 @@ const StackCards = () => {
                     transition:{duration:0.1}}}
                     onTap={() => moveToEnd(index)}
                 >
-                    <div onClick={() => moveToEnd(index)} style={{height:"25px",position:"absolute",borderRadius:"17px",marginLeft:"10px",marginTop:"13px",width:"60px",}}></div>
-                     <div style={{borderRadius:"20px",padding:"5px"}}>
-                        {/* <webview className={styles.webview} src={link}></webview> */}
-                    </div>
+                    {/* <webview className={styles.webview} src={link}></webview> */}
+                    <Image src={link} className={styles.cardImg}></Image>   
                 </motion.div>
             );
             })}
 
             {selected && !open && <motion.div
-                    style={{
-                        background: selected,
-                    }}
                     className={styles.card2}
                     animate={{
                         scale:1.1,
-                        marginTop:"100px" ,
+                        marginTop:"80px" ,
                         transition:{
                             duration:0.3
                         },
@@ -91,13 +90,16 @@ const StackCards = () => {
                         duration:0.5,
                     }}
                     >
-                    <div style={{borderRadius:"20px",padding:"5px",}}>
+                  
                     {/* {window.setTimeout(function () {
                     var webview = document.getElementById('myIframe');
                     webview.setAttribute('src', selected);
                 }, 500)} */}
                     {/* <webview id="myIframe" src={selected} frameborder="0" className={styles.webview}></webview> */}
-                    </div>
+                    <Image src={selected} className={styles.cardImg}></Image>
+                    <div onClick={() => {  
+                        setOpen(true) 
+                        setSelected(false)}} style={{height:"12.5px",top:"5px",position:"absolute",borderRadius:"17px",right:"10px",width:"25px",backgroundColor:"black",color:"white",fontSize:"10px"}}>X</div>
 
                     </motion.div>}
             </div>
