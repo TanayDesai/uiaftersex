@@ -74,7 +74,7 @@ export default function Home() {
             <h7>Resources</h7>
           </div>
           <div className={styles.description}>
-            <p>The code for this component is <a href='https://github.com/TanayDesai'>here</a>. This was made with:</p>
+            <p>The code for this component is <a href='https://github.com/TanayDesai/uiaftersex/tree/main/components/sitesearch'>here</a>. This was made with:</p>
             <li><a href='https://cmdk.paco.me/'>cdmk box </a>by paco.</li>
             <li><code className={styles.code}>React + Next.js</code> for implementation.</li>
             <p>Inspired by <a href='https://thebrowser.company/'> thebrowsercompany</a>'s site search ❤️‍🩹</p>

@@ -116,7 +116,7 @@ export default function Home() {
             <li>Press arrows/search-bar for Demo + Docs.</li>
             <li>Try dragging the broswer tabs:)</li>
             <p>PS: uiaftersex is open-source. 👇</p>
-            <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginTop:10}} color="black" size={20}/></a> 
+            <a href='https://github.com/TanayDesai/uiaftersex'><AiFillGithub style={{marginTop:10}} color="black" size={20}/></a> 
             {/* <p>A simple, <code className={styles.code}>modern</code>, and accessible</p> */}
           </div>
         </div>

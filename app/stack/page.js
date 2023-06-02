@@ -69,7 +69,7 @@ export default function Home() {
             <h7>Resources</h7>
           </div>
           <div className={styles.description}>
-          <p>The code for this component is <a href='https://github.com/TanayDesai'>here</a>. This was made with:</p>
+          <p>The code for this component is <a href='https://github.com/TanayDesai/uiaftersex/tree/main/components/stackhistory'>here</a>. This was made with:</p>
             <li><code className={styles.code}>React + Next.js</code></li>
             <li><code className={styles.code}>framer-motion</code></li>
             <li><code className={styles.code}>Electron.js</code> (for webview)</li>
