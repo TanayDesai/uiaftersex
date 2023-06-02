@@ -1,5 +1,6 @@
 const Api = async (url) => {
-  const data = await fetch("https://shot.screenshotapi.net/screenshot?token=67Z0R4W-HJGMXZ3-GFRQQER-H6QAMBE&url=" + url)
+  const token = process.env.REACT_APP_token;
+  const data = await fetch("https://shot.screenshotapi.net/screenshot?token=" + token + "&url=" + url)
   var res = await data.json();
   const screenshot = await res.screenshot
   return screenshot ? screenshot : res;
