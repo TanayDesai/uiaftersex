@@ -142,8 +142,8 @@ export default function Home() {
             {/* <div><ImCommand size={25}></ImCommand></div> */}
         </div>
         <div className={styles.description}>
-          <p>an intiuitive laboratory canvas that showcases uniquely crafted <span>user interfaces & interactions</span> that make you wanna (hopefully) come back to, <span>  after sex</span>.❤️‍🩹</p>
-          <p>all peices aim to feel good, inspire to build more or just some <span>"fuck-it why not"s</span>.</p>
+          <p>an intuitive laboratory canvas that showcases uniquely crafted <span>user interfaces & interactions</span> that make you wanna (hopefully) come back to, <span>  after sex</span>.❤️‍🩹</p>
+          <p>all pieces aim to feel good, inspire to build more or just some <span>"fuck-it why not"s</span>.</p>
         </div> 
         
         <div className={styles.footer}>

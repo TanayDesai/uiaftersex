@@ -46,8 +46,9 @@ export default function Home() {
           </div>
           <div className={styles.description}>
             <p>Sometimes you just don't care about a site enought to open their link, but are somewhat guiltiy curious? These allow you to just see what's cooking without any shame.</p>
-            <motion.p whileHover={{backgroundColor:"#f0f0f0"}} onTap={() => setOpen(!open)} className={styles.note}><span>Note</span>{!open && <BsChevronDown  style={{marginLeft:"5px"}} size={15}/>}{open && <BsChevronUp  style={{marginLeft:"5px"}} size={15}/>}</motion.p>
-            <div>{open && <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.4}} className={styles.note}><span>This demo will only work best on a Desktop web browser.</span></motion.p>}</div>
+            <p>Just click on the text or hover on desktop.</p>
+            {/* <motion.p whileHover={{backgroundColor:"#f0f0f0"}} onTap={() => setOpen(!open)} className={styles.note}><span>Note</span>{!open && <BsChevronDown  style={{marginLeft:"5px"}} size={15}/>}{open && <BsChevronUp  style={{marginLeft:"5px"}} size={15}/>}</motion.p>
+            <div>{open && <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.4}} className={styles.note}><span>This demo will only work best on a Desktop web browser.</span></motion.p>}</div> */}
           </div> 
 
           <div className={styles.subHeader}>
