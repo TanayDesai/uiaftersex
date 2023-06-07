@@ -19,6 +19,9 @@ const Timemachine = () => {
       <div className={styles.content}>
         {/* <div className={styles.box}> */}
           <TimeMachine/>
+
+
+          
         </div>
         </div>
   )
