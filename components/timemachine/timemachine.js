@@ -59,7 +59,7 @@ const TimeMachine = () => {
                         <div className={styles.displayBarSearchBox}>{link.Name}</div>
                         <motion.div  whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
                         </div> 
-                       {link.Image && <Image src={link.Image} style={{display:"flex",marginTop:"30px",margin:'auto',pointerEvents:'none',width:"70%",height:"200px"}} alt=""/> }
+                       {link.Image && <Image src={link.Image} style={{display:"flex",marginTop:"30px",margin:'auto',pointerEvents:'none',width:"60%",height:"200px"}} alt=""/> }
                     </motion.div> 
             );
             })}
