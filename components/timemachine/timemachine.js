@@ -11,7 +11,7 @@ import stack from "@/assests/demos/stack.png"
 
 const CARD_OFFSET = 50; 
 const SCALE_FACTOR = 0.15;
-const CARD_COLORS = [{Color:"aliceblue",Name:"uiaftersex",Image:false},{Color:"radial-gradient(at center bottom, #D08C85, #67E8CF)",Name:"Stack",Image:stack},{Color:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))",Name:"Link Previews",Image:link},{Color:"white",Name:"Site Search",Image:site},{Color:"radial-gradient(at center, #DEBFAC, #679ED8);",Name:"Peek",Image:false}]; 
+const CARD_COLORS = [{Color:"aliceblue",Name:"uiaftersex",Image:false},{Color:"radial-gradient(at center bottom, #D08C85, #67E8CF)",Name:"Stack",Image:stack},{Color:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))",Name:"Link Previews",Image:link},{Color:"white",Name:"Site Search",Image:stack},{Color:"radial-gradient(at center, #DEBFAC, #679ED8);",Name:"Peek",Image:false}]; 
 
 const TimeMachine = () => {
     const [cards, setCards] = useState(CARD_COLORS);
