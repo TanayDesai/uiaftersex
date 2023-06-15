@@ -3,27 +3,18 @@ import Image from 'next/image'
 import styles from '../../styles/page2.module.css'
 import Link from 'next/link'
 import React,{useState} from 'react';
-import {motion} from 'framer-motion'
-import { useRouter } from 'next/navigation';
 import TimeMachine from '@/components/timemachine/timemachine';
+import Dock from '@/components/navbar/navbar';
+
 
 const Timemachine = () => {
-  const router = useRouter();
-
-  const handleButtonClick = (name) => {
-    router.push(name);
-  }
-
   return (
-    <div className={styles.main}>
-      <div className={styles.content}>
-        {/* <div className={styles.box}> */}
+    <div className={styles.main} style={{height:"100vh"}}>
+      <div className={styles.content} style={{width:"100%"}}>
           <TimeMachine/>
-
-
-          
-        </div>
-        </div>
+      </div>
+        {/* <Dock/> */}
+    </div>
   )
 }
 

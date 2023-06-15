@@ -4,8 +4,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     src: local('LufgaBlack'), url("../../assests/fonts/LufgaLight.ttf") format('truetype');
-    /* src: local('LufgaBlack'), url("../assests/Allenoire\ Font.otf") format('truetype'); */
-    /* src: local('LufgaBlack'), url("../assests/Allenoire\ Font.otf") format('truetype'); */
+
   }
   
   @font-face {
@@ -13,36 +12,18 @@
     font-display: auto;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    /* src: local('Calming'), url("../assests/Allenoire\ Font.otf") format('truetype'); */
-    /* src: local('Calming'), url("../assests/Calming.ttf") format('truetype'); */
     src: local('Calming'), url("../../assests/fonts/Calming.ttf") format('truetype');
   }
   
-  
-  .main {
-    max-height: 150vh;
-    margin: auto;
-    width: 150vw;
-    padding: 3rem;
-    /* background-color: #000; */
-  }
-  
   .display {
-    /* margin-top: 20px; */
     margin: auto;
-    /* position: relative; */
-    /* max-width: 500px;
-    min-height: 300px; */
     background-color:#f1f1f1;
     border-radius: 8px;
     box-shadow:  rgba(0, 0, 0, 0.3) 0px 8px 30px 0px;
-    left: 9%;
-    /* scale:1.1; */
-   /* marginTop:50px; */
-    /* overflow-y: auto; */
+    left: 5%;
     position: absolute;
-    min-width: 83%;
-    height: 250px;
+    width: 90%;
+    /* height: 300px; */
     border-radius:8px;
     transform-origin: top center;
   }
@@ -98,93 +79,22 @@
   @media screen and (min-width: 600px) {
     .display {
       left: 33%;
-      min-width: 34%;
-      max-width: 50%;
+      width: 34%;
+      /* max-width: 50%; */
     }
 }
   
-  .textBox {
-    margin-top: 20px;
-    position: relative;
-    max-width: 400px;
-    height: 350px;
-    border-radius: 8px;
-    box-shadow:  rgba(0, 0, 0, 0.3) 0px 8px 30px 0px;
-  }
   
-  .textBoxBar{
-    background-image:linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0));
-    backdrop-filter: "blur(20px)"; 
-    height: 50px;
-    display: flex;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-  }
-  
-  .textBoxBottom {
-    background-color:aliceblue;
-    height: 86%;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
-  
-  .logoBox {
-    position: relative;
-    margin: auto;
-    max-width: 550px;
-    min-height: 300px;
-    background-color:#f1f1f1;
-    background: #FFFFFA;
-    background: radial-gradient(at center, #FFFFFA, #FFADD5);
-    border-radius: 8px;
-    box-shadow:  rgba(0, 0, 0, 0.3) 0px 8px 30px 0px;
-    padding: 15px;
-  }
-  
-  @media (max-width: 600px) {
-    .logoBox {
-      width: 350px;
-    }
-    .main {
-      max-height: 150vh;
-    }
-  }
-  
-  .header {
-    font-size:44px;
-    justify-content:space-between;
-    display: flex;
-    font-weight: 700;
-    color:#000;
-    font-family: "Calming";
-  }
-  
-  .description {
-    display: inherit;
-    justify-content:space-around;
-    align-items: inherit;
-    margin-top: 26px;
-  }
-  
-  .description a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .description p {
-    margin-top: 22px;
-    color: #666666;
-    font-size: 14px;
-    line-height: 25px;
-    font-weight: 700;
-    font-family: "LufgaBlack";
-  }
-  
-  .description span {
-    /* color: #000; */
-  }
-  
+.header {
+  font-size:44px;
+  justify-content:space-between;
+  display: flex;
+  font-weight: 700;
+  color:#000;
+  padding-left: 15px;
+  font-family: "Calming";
+}
+
   .notes {
     display: inherit;
     justify-content:space-around;
@@ -232,13 +142,14 @@
   
   .footer {
     display: flex;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     align-items: center;
+    padding-left: 15px;
   }
   
   .footer p {
     color: #666666;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 25px;
     border-radius: 10px;
     /* padding: 5px; */
@@ -276,100 +187,18 @@
     }
   }
 
-  
-  .container{
+  .button {
+    width: 50px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    border: none;
     margin: auto;
-    width: 300px;
-    /* padding: 5px; */
-    /* background-color: rgb(220, 220, 220); */
-    border-radius: 15px;
-    margin-top: 500px;
-    cursor:e-resize;
-  }
-  
-  .scrollBox {
-    display:flex; 
-    overflow:auto;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .display2 {
-    /* background-color:aqua; */
-    color: rgb(0, 0, 0);
-    height: 50px;
-    border-radius: 15px;
-    align-items: center;
-    /* display: flex; */
-    margin: 1px;
-    width: 300px;
-    margin-bottom: 10px;
-    scroll-snap-align: center;
-    position: relative;
-  }
-  
-  .display2 p {
-    margin: auto;
-    text-align: center;
-    word-wrap: break-word;
-    font-family: 'LufgaBlack';
-    word-break:keep-all;
-    white-space: nowrap;
-    /* background-color: antiquewhite; */
-    overflow-wrap: normal;
-    text-shadow: 0 0 10px rgba(0,0,0,0.4);
-    flex-wrap: nowrap;
-    font-size: 16px;
-  }
-
-  .display2 h1 {
-    margin: auto;
-    text-align: center;
-    word-wrap: break-word;
-    font-family: 'LufgaBlack';
-    word-break:keep-all;
-    white-space: nowrap;
-    /* background-color: antiquewhite; */
-    overflow-wrap: normal;
-    /* text-shadow: 0 0 10px rgba(0,0,0,0.4); */
-    flex-wrap: nowrap;
-  }
-  
-  .scrollBox::-webkit-scrollbar{
-    display: none;
-  }
-  
-  .stick {
-    margin: auto;
-    background-color: #c5c5c5;
-    width: 10px;
-    height: 10px;
-    left: 50%;
+    height: 30px;
+    display: inline-flex;
     position: absolute;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4)
-  }
-  
-  .leftProgress {
-    width: 50%;
-    margin-left:50%;
-    background-color: #c5c5c5;
-    height: 2px;
-  }
+    bottom: 50px;
+    left: calc(50% - 25px);
+    box-shadow:  rgba(0, 0, 0, 0.3) 0px 8px 30px 0px;
 
-  .progress {
-    width: 100%;
-    background-color: #c5c5c5;
-    height: 2px;
-  }
-  .rightProgress{
-    width: 50%;
-    background-color: #c5c5c5;
-    height: 2px;
-  }
-
-  .progressBar {
-    display:"flex";
-    justify-content:"space-between";
-    align-items:"center";
-    /* background-color: #FFADD5; */
   }
