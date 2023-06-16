@@ -76,7 +76,7 @@
     margin: auto;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .display {
       left: 33%;
       width: 34%;

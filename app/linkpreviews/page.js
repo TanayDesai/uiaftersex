@@ -1,16 +1,14 @@
 "use client"
 import Image from 'next/image'
-import styles from '../../styles/page2.module.css'
-import Link from 'next/link'
+import styles from '@/styles/page2.module.css'
 import React,{useState} from 'react';
 import {motion} from 'framer-motion'
 import { useRouter } from 'next/navigation';
 import All from '@/components/linkpreviews/All';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import avatar from "../../assests/avatar2.png"
-import {FiAlertOctagon} from 'react-icons/fi'
-import {BsChevronDown, BsChevronUp} from 'react-icons/bs'
+import avatar from "@/assests/avatar2.png"
+
 
 export default function Home() {
   const router = useRouter();

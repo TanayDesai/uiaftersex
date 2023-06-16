@@ -3,15 +3,12 @@ import { motion } from "framer-motion";
 import move from "lodash-move";
 import styles from "./timemachine.module.css";
 import Image from "next/image";
-import avatar from "@/assests/avatar2.png"
 import {HiArrowSmallRight} from "react-icons/hi2";
 import site from "@/assests/demos/sites.png"
 import link from "@/assests/demos/link.png"
 import stack from "@/assests/demos/stack.png"
 import { useSwipeable } from "react-swipeable";
 import {HiArrowsRightLeft} from "react-icons/hi2";
-import {VscTwitter} from "react-icons/vsc";
-import {AiFillGithub} from "react-icons/ai";
 import { useRouter } from 'next/navigation';
 
 

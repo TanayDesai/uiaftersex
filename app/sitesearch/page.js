@@ -1,7 +1,6 @@
 "use client"
 import Image from 'next/image'
-import styles from '../../styles/page2.module.css'
-import Link from 'next/link'
+import styles from '@/styles/page2.module.css'
 import React,{useState, useEffect} from 'react';
 import {ImCommand} from 'react-icons/im';
 import {motion} from 'framer-motion'
@@ -9,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import CommandMenuSiteSearch from '@/components/sitesearch/command';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import avatar from "../../assests/avatar2.png"
+import avatar from "@/assests/avatar2.png"
 
 export default function Home() {
   const router = useRouter();

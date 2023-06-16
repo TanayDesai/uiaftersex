@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Preview from "./Preview";
-import starship from "../../assests/linkimgs/starship.png";
-import vercel from "../../assests/linkimgs/vercel.png";
-import reflect from "../../assests/linkimgs/reflect.png";
-import apple2 from "../../assests/linkimgs/apple2.png";
+import starship from "@/assests/linkimgs/starship.png";
+import vercel from "@/assests/linkimgs/vercel.png";
+import reflect from "@/assests/linkimgs/reflect.png";
+import apple2 from "@/assests/linkimgs/apple2.png";
 
 const weblinks = [
     // {

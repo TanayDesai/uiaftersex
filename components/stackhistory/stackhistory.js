@@ -2,10 +2,10 @@ import React, { useRef,useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import move from "lodash-move";
 import styles from "./stackhistory.module.css";
-import spacex from "../../assests/stackimgs/spacex.png"
-import tesla from "../../assests/stackimgs/tesla.png"
-import apple from "../../assests/stackimgs/apple.png"
-import arc from "../../assests/stackimgs/arc.png"
+import spacex from "@/assests/stackimgs/spacex.png"
+import tesla from "@/assests/stackimgs/tesla.png"
+import apple from "@/assests/stackimgs/apple.png"
+import arc from "@/assests/stackimgs/arc.png"
 import Image from "next/image";
 
 const CARD_OFFSET = 50; 

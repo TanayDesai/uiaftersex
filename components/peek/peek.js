@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import styles from "./index.module.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import peekImg from "../../assests/peekimgs/starship.png";
+import peekImg from "@/assests/peekimgs/arc.png";
 
 
 const Peek = () => {
@@ -16,7 +16,7 @@ const Peek = () => {
 
   return (
    <div className={styles.center}>
-      <p onClick={change} className={styles.underlineAnimation}>SpaceX.com</p>
+      <p onClick={change} className={styles.underlineAnimation}>Arc.net</p>
 
     {open &&  <motion.div initial={{scale:0.7}} animate={{scale:[0.7,1.1,1]}} transition={{type:"ease" ,duration: 0.4,time:[0,0.7 ** 0.4,0.4 ]}}  className={styles.modal}>
       <button onClick={change} className={styles.modalClose}>

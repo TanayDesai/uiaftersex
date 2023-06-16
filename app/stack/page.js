@@ -1,22 +1,18 @@
 "use client"
 import Image from 'next/image'
-import styles from '../../styles/page2.module.css'
-import Link from 'next/link'
+import styles from '@/styles/page2.module.css'
 import React,{useState} from 'react';
 import {ImCommand} from 'react-icons/im';
 import {motion} from 'framer-motion'
 import { useRouter } from 'next/navigation';
-// import Peek from '@/components/peek/peek';
 import StackCards from '@/components/stackhistory/stackhistory';
 import {VscTwitter} from 'react-icons/vsc'
 import {AiFillGithub} from 'react-icons/ai'
-import avatar from "../../assests/avatar2.png"
-import {FiAlertOctagon} from 'react-icons/fi'
+import avatar from "@/assests/avatar2.png"
 import {BsChevronDown, BsChevronUp} from 'react-icons/bs'
 
 export default function Home() {
   const router = useRouter();
-  const [popUpValue, setPopUpValue] = useState('');
   const [open, setOpen] = useState(false);
 
   const handleButtonClick = (name) => {
