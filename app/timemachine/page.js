@@ -26,7 +26,7 @@ const Timemachine = () => {
                 <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}}  size={20}/></a>
                 <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} size={20}/></a>
                 </div> 
-            </div>
+          </div>
     </div>
   )
 }

@@ -15,13 +15,13 @@ import {AiFillGithub} from "react-icons/ai";
 
 export const Uiaftersex = () => {
     return (
-        <div style={{width:"100%",margin:"5px"}}>
+        <div style={{width:"100%",borderRadius:"8px",padding:"5px", background: "#FFFFFA",background: "radial-gradient(at center, #FFFFFA, #FFADD5)"}}>
             <div className={styles.header}>
                 <h7>uiaftersex</h7>   
             </div>
-            <div className={styles.notes}>
-            <p>an intuitive laboratory canvas that showcases uniquely crafted <span>user interfaces & interactions</span> that make you wanna (hopefully) come back to, <span>  after sex</span>.❤️‍🩹</p>
-            <p>all pieces aim to feel good, inspire to build more or just some <span>"fuck-it why not"s</span>.</p>
+                <div className={styles.notes}>
+                <p>an intuitive laboratory canvas that showcases uniquely crafted <span>user interfaces & interactions</span> that make you wanna (hopefully) come back to, <span>  after sex</span>.❤️‍🩹</p>
+                <p>all pieces aim to feel good, inspire to build more or just some <span>"fuck-it why not"s</span>.</p>
             </div> 
       </div>
     )
@@ -67,7 +67,7 @@ const TimeMachine = () => {
     return (
         <div> 
             {/* {...handlers} */}
-            <div  style={{width:"100%",height:"800px"}}>
+            <div style={{width:"100%",height:"800px"}}>
             {cards.map((link, index) => {
                 return (
                     <motion.div
@@ -96,11 +96,11 @@ const TimeMachine = () => {
                             <div className={styles.displayBarSearchBox}>{link.Name}</div>
                             <motion.div  whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
                         </div>} 
-                       {link.Image ? <Image src={link.Image} style={{display:"flex",marginTop:"30px",margin:'auto',pointerEvents:'none',width:"200px",height:"200px"}} alt=""/> : <Uiaftersex/>}
+                       {link.Image ? <Image src={link.Image} style={{display:"flex",marginTop:"30px",margin:'auto',pointerEvents:'none',width:"250px",height:"200px"}} alt=""/> : <Uiaftersex/>}
                     </motion.div> 
             );
             })}
-               <motion.div whileHover={{scale:0.9,transition:{duration:0.2}}} transition={{duration:0.2}} className={styles.button} onClick={handleClickDown}><HiArrowsRightLeft size={20} style={{margin:"auto"}} /></motion.div>
+               <motion.div whileHover={{scale:0.9,transition:{duration:0.2}}} transition={{duration:0.2}} className={styles.button} onClick={handleClickDown}><HiArrowsRightLeft size={25} style={{margin:"auto"}} /></motion.div>
             </div>
         </div>
     )
