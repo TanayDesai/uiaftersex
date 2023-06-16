@@ -23,16 +23,6 @@ export const Uiaftersex = () => {
             <p>an intuitive laboratory canvas that showcases uniquely crafted <span>user interfaces & interactions</span> that make you wanna (hopefully) come back to, <span>  after sex</span>.❤️‍🩹</p>
             <p>all pieces aim to feel good, inspire to build more or just some <span>"fuck-it why not"s</span>.</p>
             </div> 
-            
-            <div className={styles.footer}>
-            <p>crafted by</p>
-                <div className={styles.social}>
-                <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image>
-                <p  style={{marginLeft: "5px",fontSize:"13px"}}><span>Tanay</span></p>
-                <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}}  size={20}/></a>
-                <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} size={20}/></a>
-                </div> 
-            </div>
       </div>
     )
 }
@@ -76,7 +66,7 @@ const TimeMachine = () => {
 
     return (
         <div> 
-            <div {...handlers} style={{width:"100%",height:"600px"}}>
+            <div {...handlers} style={{width:"100%",backgroundColor:"red",height:"800px"}}>
             {cards.map((link, index) => {
                 return (
                     <motion.div
@@ -85,7 +75,7 @@ const TimeMachine = () => {
                             background: link.Color,
                         }}
                         animate={{
-                            marginTop:"300px",
+                            marginTop:"250px",
                             top: index * -CARD_OFFSET,
                             scale: 1 - index * SCALE_FACTOR,
                             zIndex: CARD_COLORS.length - index,
