@@ -66,7 +66,8 @@ const TimeMachine = () => {
 
     return (
         <div> 
-            <div {...handlers} style={{width:"100%",backgroundColor:"red",height:"800px"}}>
+            {/* {...handlers} */}
+            <div  style={{width:"100%",height:"800px"}}>
             {cards.map((link, index) => {
                 return (
                     <motion.div

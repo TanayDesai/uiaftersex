@@ -11,15 +11,14 @@ import {AiFillGithub} from "react-icons/ai";
 
 
 
-
 const Timemachine = () => {
   return (
-    <div className={styles.main} style={{height:"100vh",padding:"0px"}}>
+    <div className={styles.main} style={{padding:"0px"}}>
       <div style={{width:"100%"}}>
           <TimeMachine/>
       </div>
         {/* <Dock/> */}
-        {/* <div className={styles.footer}>
+        <div className={styles.footer} style={{padding:"15px"}}>
             <p>crafted by</p>
                 <div className={styles.social}>
                 <Image  style={{marginLeft: "5px"}} src={avatar} width={20} height={20}></Image>
@@ -27,7 +26,7 @@ const Timemachine = () => {
                 <a href='https://twitter.com/tanaydesaii'><VscTwitter style={{marginLeft: "5px"}}  size={20}/></a>
                 <a href='https://github.com/TanayDesai'><AiFillGithub style={{marginLeft: "10px",marginRight:"7px"}} size={20}/></a>
                 </div> 
-            </div> */}
+            </div>
     </div>
   )
 }
