@@ -16,7 +16,7 @@ const Peek = () => {
 
   return (
    <div className={styles.center}>
-      <p onClick={change} className={styles.underlineAnimation}>Arc.net</p>
+      <p onClick={change} className={styles.underlineAnimation}>SpaceX.com</p>
 
     {open &&  <motion.div initial={{scale:0.7}} animate={{scale:[0.7,1.1,1]}} transition={{type:"ease" ,duration: 0.4,time:[0,0.7 ** 0.4,0.4 ]}}  className={styles.modal}>
       <button onClick={change} className={styles.modalClose}>

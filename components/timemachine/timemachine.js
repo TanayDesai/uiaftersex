@@ -12,6 +12,8 @@ import { useSwipeable } from "react-swipeable";
 import {HiArrowsRightLeft} from "react-icons/hi2";
 import {VscTwitter} from "react-icons/vsc";
 import {AiFillGithub} from "react-icons/ai";
+import { useRouter } from 'next/navigation';
+
 
 export const Uiaftersex = () => {
     return (
@@ -29,9 +31,10 @@ export const Uiaftersex = () => {
 
 const CARD_OFFSET = 60; 
 const SCALE_FACTOR = 0.15;
-const CARD_COLORS = [{Color:"aliceblue",Name:"uiaftersex",Image:false},{Color:"radial-gradient(at center bottom, #D08C85, #67E8CF)",Name:"Stack",Image:stack},{Color:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))",Name:"Link Previews",Image:link},{Color:"white",Name:"Site Search",Image:site},{Color:"radial-gradient(at center, #DEBFAC, #679ED8);",Name:"Peek",Image:true}]; 
+const CARD_COLORS = [{Color:"aliceblue",Name:"uiaftersex",Image:false},{Color:"radial-gradient(at center bottom, #D08C85, #67E8CF)",Name:"Stack",Image:stack,Link:"/stack"},{Color:"radial-gradient(at center, rgba(215, 90, 88, 1.0), rgba(62, 37, 170, 1.0))",Name:"Link Previews",Image:link,Link:"/linkpreviews"},{Color:"white",Name:"Site Search",Image:site,Link:"/sitesearch"},{Color:"radial-gradient(at center, #DEBFAC, #679ED8);",Name:"Peek",Image:true,Link:"/peek"}]; 
 
 const TimeMachine = () => {
+    const router = useRouter();
     const [cards, setCards] = useState(CARD_COLORS);
     
     const moveToEnd = from => {
@@ -94,7 +97,8 @@ const TimeMachine = () => {
                             <div className={styles.displayBarIcon}></div>
                         </div>
                             <div className={styles.displayBarSearchBox}>{link.Name}</div>
-                            <motion.div  whileHover={{scale: 1.1}} className={styles.displayBarArrow}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
+                            {/* onClick={() => router.push(link.Link)}  */}
+                            <motion.div  whileHover={{scale: 1.1}} className={styles.displayBarArrow}  onClick={() => router.push(link.Link)}><HiArrowSmallRight color='black' size={20}></HiArrowSmallRight></motion.div>
                         </div>} 
                        {link.Image ? <Image src={link.Image} style={{display:"flex",marginTop:"30px",margin:'auto',pointerEvents:'none',width:"250px",height:"200px"}} alt=""/> : <Uiaftersex/>}
                     </motion.div> 
